@@ -1,0 +1,22 @@
+--- 
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  labels: 
+    app: devops-project
+  name: project-deploymentv3
+spec: 
+  ports: ~
+  replicas: 3
+  selector: 
+    matchLabels: 
+      app: devops-project
+  template: 
+    metadata: 
+      labels: 
+        app: devops-project
+    spec: 
+      containers: 
+        - 
+          image: "ahmedshaikx/dockerhub:q1push"
+          name: webpages

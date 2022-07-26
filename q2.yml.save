@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: img-static-site-example
+spec:
+  selector:
+    matchLabels:
+      app: 
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app:  img-static-site-example
+    spec:
+      containers:
+      - name:  img-static-site-example
+        image:  img-static-site-example:latest
+        ports:
+        - containerPort: 80
